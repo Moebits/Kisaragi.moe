@@ -1,0 +1,1034 @@
+.commands {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--commandsBackground);
+}
+
+.commands-top-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.commands-top-section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.commands-header {
+    text-align: center;
+    font-family: "Skranji", sans-serif;
+    color: #ff35d3;
+    font-size: 8vw;
+}
+
+.commands-paragraph {
+    text-align: center;
+    font-family: "Skranji", sans-serif;
+    color: #ff88e7;
+    font-size: 2vw;
+}
+
+.commands-hr {
+    background-color: #ff26d0;
+    border: none;
+    height: 0.2rem;
+    width: 80%;
+    border-radius: 3rem;
+    margin: auto;
+    margin-bottom: 2vw;
+}
+
+.kisaraginewyear {
+    margin-top: 2vw;
+    margin-left: 4vw;
+    width: 15%;
+    height: 15%;
+    &:active {
+        filter: brightness(110%);
+    }
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2vw;
+}
+
+.category-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.category {
+    margin-top: 1.5vw;
+    margin-right: 1.5vw;
+    cursor: pointer;
+    transition: transform 0.08s;
+    width: 12%;
+    height: 12%;
+    &:active {
+        transform: translateY(-0.5vw);
+    }
+}
+
+.command-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2vw;
+}
+
+.command-box {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border: 0.15vw solid #3c45ff;
+    padding: 1vw;
+    margin-bottom: 2vw;
+}
+
+.command-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.command-text-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.command-name {
+    font-family: "Skranji", sans-serif;
+    color: #5559ff;
+    font-size: 2vw;
+    filter: brightness(110%);
+    span:active {
+        color: white;
+    }
+}
+.command-desc-container {
+    display: flex;
+    margin-left: 2vw;
+    width: 70%;
+}
+.command-desc {
+    font-family: "Skranji", sans-serif;
+    color: #5579ff;
+    font-size: 1.5vw;
+    word-wrap: break-word;
+    span:active {
+        color: white;
+    }
+}
+
+.command-details {
+    display: none;
+    margin-top: 1vw;
+}
+
+.command-aliases {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.2vw;
+    margin-bottom: 0.3vw;
+    span:active {
+        color: white;
+    }
+}
+
+.command-cooldown {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.2vw;
+    margin-bottom: 0.3vw;
+    span:active {
+        color: white;
+    }
+}
+
+.command-help {
+    color: #9198fd;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.3vw;
+    margin-bottom: 0.3vw;
+}
+
+.command-examples {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+}
+
+.command-detail-color {
+    color: #505cff;
+}
+
+.show-pic-container {
+    display: flex;
+    justify-content: center;
+}
+
+.show-pic {
+    cursor: pointer;
+    &:active {
+        filter: brightness(0) invert(1);
+    }
+}
+
+.hide-show-pic {
+    display: none;
+}
+
+.example-image {
+    display: none;
+    margin: auto;
+}
+
+.command-selection::selection {
+    background-color: #626aff;
+}
+
+@media screen and (min-width: 37.5rem) {
+    .category:hover {
+        transform: translateY(-0.5vw);
+    }
+
+    .show-pic:hover {
+        filter: brightness(0) invert(1);
+    }
+
+    .command-name span:hover {
+        color: white;
+    }
+
+    .command-desc span:hover {
+        color: white;
+    }
+
+    .command-aliases span:hover {
+        color: white;
+    }
+    
+    .command-cooldown span:hover {
+        color: white;
+    }
+}
+
+.admin-command-box {
+    border: 0.15vw solid #ff3c76;
+}
+.admin-command-name {
+    color: #ff5588;
+}
+.admin-command-desc {
+    color: #ff558e;
+}
+.admin-command-detail-color {
+    color: #ff50a2;
+}
+.admin-command-help {
+    color: #fd91ba;
+}
+.admin-command-selection::selection {
+    background-color: #ff6289;
+}
+.admin-show-pic {
+    filter: hue-rotate(90deg);
+}
+
+.anime-command-box {
+    border: 0.15vw solid #ff3cf5;
+}
+.anime-command-name {
+    color: #ff55e3;
+}
+.anime-command-desc {
+    color: #f955ff;
+}
+.anime-command-detail-color {
+    color: #ff50f6;
+}
+.anime-command-help {
+    color: #fd91fd;
+}
+.anime-command-selection::selection {
+    background-color: #ff62f7;
+}
+.anime-show-pic {
+    filter: hue-rotate(50deg);
+}
+
+.config-command-box {
+    border: 0.15vw solid #3c7aff;
+}
+.config-command-name {
+    color: #55bbff;
+}
+.config-command-desc {
+    color: #55b2ff;
+}
+.config-command-detail-color {
+    color: #50aaff;
+}
+.config-command-help {
+    color: #91d2fd;
+}
+.config-command-selection::selection {
+    background-color: #62b3ff;
+}
+.config-show-pic {
+    filter: hue-rotate(-10deg);
+}
+
+.fun-command-box {
+    border: 0.15vw solid #78ff6c;
+}
+.fun-command-name {
+    color: #8fff73;
+}
+.fun-command-desc {
+    color: #7cff77;
+}
+.fun-command-detail-color {
+    color: #91ff7b;
+}
+.fun-command-help {
+    color: #91fd91;
+}
+.fun-command-selection::selection {
+    background-color: #8dff7e;
+}
+.fun-show-pic {
+    filter: brightness(120%);
+    filter: hue-rotate(-90deg);
+}
+
+.game-command-box {
+    border: 0.15vw solid #ff3cff;
+}
+.game-command-name {
+    color: #ff55e3;
+}
+.game-command-desc {
+    color: #ff55f1;
+}
+.game-command-detail-color {
+    color: #ff50f0;
+}
+.game-command-help {
+    color: #fd91fd;
+}
+.game-command-selection::selection {
+    background-color: #ff62ff;
+}
+.game-show-pic {
+    filter: hue-rotate(70deg);
+}
+
+.heart-command-box {
+    border: 0.15vw solid #ff3c46;
+}
+.heart-command-name {
+    color: #ff556c;
+}
+.heart-command-desc {
+    color: #ff556c;
+}
+.heart-command-detail-color {
+    color: #ff505f;
+}
+.heart-command-help {
+    color: #fd91a3;
+}
+.heart-command-selection::selection {
+    background-color: #ff627c;
+}
+.heart-show-pic {
+    filter: saturate(20%) brightness(180%);
+    filter: hue-rotate(110deg);
+}
+
+.image-command-box {
+    border: 0.15vw solid #3c70ff;
+}
+.image-command-name {
+    color: #5582ff;
+}
+.image-command-desc {
+    color: #5582ff;
+}
+.image-command-detail-color {
+    color: #5079ff;
+}
+.image-command-help {
+    color: #91b7fd;
+}
+.image-command-selection::selection {
+    background-color: #62a1ff;
+}
+.image-show-pic {
+    filter: hue-rotate(-10deg);
+}
+
+.info-command-box {
+    border: 0.15vw solid #873cff;
+}
+.info-command-name {
+    color: #ad55ff;
+}
+.info-command-desc {
+    color: #9655ff;
+}
+.info-command-detail-color {
+    color: #9c50ff;
+}
+.info-command-help {
+    color: #c091fd;
+}
+.info-command-selection::selection {
+    background-color: #b362ff;
+}
+.info-show-pic {
+    filter: hue-rotate(30deg);
+}
+
+.weeb-command-box {
+    border: 0.15vw solid #ff3cb4;
+}
+.weeb-command-name {
+    color: #ff55c6;
+}
+.weeb-command-desc {
+    color: #ff55cc;
+}
+.weeb-command-detail-color {
+    color: #ff50d9;
+}
+.weeb-command-help {
+    color: #fd91dd;
+}
+.weeb-command-selection::selection {
+    background-color: #ff62be;
+}
+.weeb-show-pic {
+    filter: hue-rotate(70deg);
+}
+
+.level-command-box {
+    border: 0.15vw solid #ff8a3c;
+}
+.level-command-name {
+    color: #ffb555;
+}
+.level-command-desc {
+    color: #ffa755;
+}
+.level-command-detail-color {
+    color: #ffa550;
+}
+.level-command-help {
+    color: #fdc591;
+}
+.level-command-selection::selection {
+    background-color: #ffae62;
+}
+.level-show-pic {
+    filter: brightness(150%);
+    filter: hue-rotate(-200deg);
+}
+
+.lewd-command-box {
+    border: 0.15vw solid #d13cff;
+}
+.lewd-command-name {
+    color: #c955ff;
+}
+.lewd-command-desc {
+    color: #dd55ff;
+}
+.lewd-command-detail-color {
+    color: #c850ff;
+}
+.lewd-command-help {
+    color: #d291fd;
+}
+.lewd-command-selection::selection {
+    background-color: #d262ff;
+}
+.lewd-show-pic {
+    filter: hue-rotate(30deg);
+}
+
+.misc-command-box {
+    border: 0.15vw solid #ff3c97;
+}
+.misc-command-name {
+    color: #ff559c;
+}
+.misc-command-desc {
+    color: #ff5596;
+}
+.misc-command-detail-color {
+    color: #ff5099;
+}
+.misc-command-help {
+    color: #fd91ba;
+}
+.misc-command-selection::selection {
+    background-color: #ff62ab;
+}
+.misc-show-pic {
+    filter: hue-rotate(90deg);
+}
+
+.mod-command-box {
+    border: 0.15vw solid #a73cff;
+}
+.mod-command-name {
+    color: #bb55ff;
+}
+.mod-command-desc {
+    color: #b255ff;
+}
+.mod-command-detail-color {
+    color: #b950ff;
+}
+.mod-command-help {
+    color: #c991fd;
+}
+.mod-command-selection::selection {
+    background-color: #b862ff;
+}
+.mod-show-pic {
+    filter: hue-rotate(30deg);
+}
+
+.music-command-box {
+    border: 0.15vw solid #ff3ce5;
+}
+.music-command-name {
+    color: #ff55da;
+}
+.music-command-desc {
+    color: #ff55e3;
+}
+.music-command-detail-color {
+    color: #f050ff;
+}
+.music-command-help {
+    color: #fd91fd;
+}
+.music-command-selection::selection {
+    background-color: #ff62ff;
+}
+.music-show-pic {
+    filter: hue-rotate(60deg);
+}
+
+.music2-command-box {
+    border: 0.15vw solid #ff3c97;
+}
+.music2-command-name {
+    color: #ff55b2;
+}
+.music2-command-desc {
+    color: #ff55aa;
+}
+.music2-command-detail-color {
+    color: #ff50a2;
+}
+.music2-command-help {
+    color: #fd91cc;
+}
+.music2-command-selection::selection {
+    background-color: #ff629e;
+}
+.music2-show-pic {
+    filter: hue-rotate(90deg);
+}
+
+.video-command-box {
+    border: 0.15vw solid #ff3c56;
+}
+.video-command-name {
+    color: #ff556c;
+}
+.video-command-desc {
+    color: #ff557a;
+}
+.video-command-detail-color {
+    color: #ff5076;
+}
+.video-command-help {
+    color: #fd91b1;
+}
+.video-command-selection::selection {
+    background-color: #ff6277;
+}
+.video-show-pic {
+    filter: hue-rotate(110deg);
+}
+
+.waifu-command-box {
+    border: 0.15vw solid #3ce8ff;
+}
+.waifu-command-name {
+    color: #55ebff;
+}
+.waifu-command-desc {
+    color: #55e5ff;
+}
+.waifu-command-detail-color {
+    color: #50f3ff;
+}
+.waifu-command-help {
+    color: #91f9fd;
+}
+.waifu-command-selection::selection {
+    background-color: #62e0ff;
+}
+.waifu-show-pic {
+    filter: brightness(150%);
+    filter: hue-rotate(-70deg);
+}
+
+.website-command-box {
+    border: 0.15vw solid #3c97ff;
+}
+.website-command-name {
+    color: #55a4ff;
+}
+.website-command-desc {
+    color: #559fff;
+}
+.website-command-detail-color {
+    color: #50aaff;
+}
+.website-command-help {
+    color: #91c0fd;
+}
+.website-command-selection::selection {
+    background-color: #62abff;
+}
+.website-show-pic {
+    filter: hue-rotate(-20deg);
+}
+
+.website2-command-box {
+    border: 0.15vw solid #ff3cd5;
+}
+.website2-command-name {
+    color: #ff55e3;
+}
+.website2-command-desc {
+    color: #ff55e8;
+}
+.website2-command-detail-color {
+    color: #ff50f0;
+}
+.website2-command-help {
+    color: #fd91e6;
+}
+.website2-command-selection::selection {
+    background-color: #ff62f2;
+}
+.website2-show-pic {
+    filter: hue-rotate(60deg);
+}
+
+.music3-command-box {
+    border: 0.15vw solid #ef3cff;
+}
+.music3-command-name {
+    color: #f155ff;
+}
+.music3-command-desc {
+    color: #f155ff;
+}
+.music3-command-detail-color {
+    color: #f050ff;
+}
+.music3-command-help {
+    color: #f991fd;
+}
+.music3-command-selection::selection {
+    background-color: #ed62ff;
+}
+.music3-show-pic {
+    filter: hue-rotate(40deg);
+}
+
+.reddit-command-box {
+    border: 0.15vw solid #ff533c;
+}
+.reddit-command-name {
+    color: #ff6955;
+}
+.reddit-command-desc {
+    color: #ff6955;
+}
+.reddit-command-detail-color {
+    color: #ff6450;
+}
+.reddit-command-help {
+    color: #fda191;
+}
+.reddit-command-selection::selection {
+    background-color: #ff7962;
+}
+.reddit-show-pic {
+    filter: hue-rotate(120deg);
+}
+
+.twitter-command-box {
+    border: 0.15vw solid #3cd8ff;
+}
+.twitter-command-name {
+    color: #55ebff;
+}
+.twitter-command-desc {
+    color: #55f4ff;
+}
+.twitter-command-detail-color {
+    color: #50f3ff;
+}
+.twitter-command-help {
+    color: #91f9fd;
+}
+.twitter-command-selection::selection {
+    background-color: #62edff;
+}
+.twitter-show-pic {
+    filter: hue-rotate(-70deg);
+}
+
+.misc2-command-box {
+    border: 0.15vw solid #ff3cae;
+}
+.misc2-command-name {
+    color: #ff55b8;
+}
+.misc2-command-desc {
+    color: #ff55b2;
+}
+.misc2-command-detail-color {
+    color: #ff50b0;
+}
+.misc2-command-help {
+    color: #fd91c7;
+}
+.misc2-command-selection::selection {
+    background-color: #ff62c3;
+}
+.misc2-show-pic {
+    filter: hue-rotate(90deg);
+}
+
+.website3-command-box {
+    border: 0.15vw solid #3ca1ff;
+}
+.website3-command-name {
+    color: #55adff;
+}
+.website3-command-desc {
+    color: #55c9ff;
+}
+.website3-command-detail-color {
+    color: #50b9ff;
+}
+.website3-command-help {
+    color: #91ccfd;
+}
+.website3-command-selection::selection {
+    background-color: #62b3ff;
+}
+.website3-show-pic {
+    filter: hue-rotate(-50deg);
+}
+
+.botdev-command-box {
+    border: 0.15vw solid #3c3fff;
+}
+.botdev-command-name {
+    color: #5558ff;
+}
+.botdev-command-desc {
+    color: #5855ff;
+}
+.botdev-command-detail-color {
+    color: #5053ff;
+}
+.botdev-command-help {
+    color: #9198fd;
+}
+.botdev-command-selection::selection {
+    background-color: #6272ff;
+}
+.botdev-show-pic {
+    filter: hue-rotate(10deg);
+}
+
+.label {
+    height: 10%;
+    width: 10%;
+}
+
+.categories-mobile {
+    display: none;
+}
+
+.command-img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 62.5rem) {
+    .commands-header {
+        font-size: 10vw;
+    }
+    
+    .commands-paragraph {
+        font-size: 2.5vw;
+    }
+    
+    .commands-hr {
+        height: 0.08rem;
+        width: 80%;
+    }
+    
+    .kisaraginewyear {
+        width: 20%;
+        height: 20%;
+    }
+
+    .category {
+        margin-top: 1.5vw;
+        margin-right: 1.5vw;
+        width: 17%;
+        height: 17%;
+    }
+
+    .command-box {
+        padding: 1.5vw;
+        margin-bottom: 4vw;
+        border-width: 0.3vw;
+    }
+
+    .command-name {
+        font-size: 4vw;
+    }
+
+    .command-desc {
+        font-size: 2vw;
+    }
+
+    .label {
+        height: 20%;
+        width: 20%;
+    }
+
+    .command-aliases {
+        font-size: 2vw;
+    }
+    
+    .command-cooldown {
+        font-size: 2vw;
+    }
+    
+    .command-help {
+        font-size: 2vw;
+    }
+    
+    .command-examples {
+        font-size: 2vw;
+    }
+
+    .show-pic {
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        width: 10%;
+        height: 10%;
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+    .commands-header {
+        font-size: 10vw;
+    }
+    
+    .commands-paragraph {
+        font-size: 2.5vw;
+    }
+    
+    .commands-hr {
+        height: 0.08rem;
+        width: 80%;
+    }
+    
+    .kisaraginewyear {
+        width: 20%;
+        height: 20%;
+    }
+
+    .category {
+        margin-top: 5vw;
+        margin-right: 5vw;
+        width: 30%;
+        height: 30%;
+    }
+
+    .categories {
+        display: none;
+    }
+
+    .categories-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 4vw;
+    }
+
+    .command-box {
+        padding: 1.5vw;
+        margin-bottom: 4vw;
+        border-width: 0.5vw;
+    }
+
+    .command-name {
+        font-size: 5vw;
+    }
+
+    .command-desc {
+        font-size: 3vw;
+    }
+
+    .label {
+        height: 20%;
+        width: 20%;
+    }
+
+    .command-aliases {
+        font-size: 3.7vw;
+    }
+    
+    .command-cooldown {
+        font-size: 3.7vw;
+    }
+    
+    .command-help {
+        font-size: 3.7vw;
+    }
+    
+    .command-examples {
+        font-size: 3.7vw;
+    }
+
+    .show-pic {
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        width: 20%;
+        height: 20%;
+    }
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
+input:focus, button:focus {
+    outline: none;
+}
+
+.commands-search-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+    height: 5vw;
+}
+
+.commands-search-container {
+    display: flex;
+    justify-content: center;
+    border: 0.2vw solid #ff21e1;
+}
+
+.commands-search {
+    border: none;
+    width: 100%;
+    font-size: 4vw;
+    font-family: "Skranji", sans-serif;
+    color: #ff3aef;
+    background-color: transparent;
+}
+
+.commands-search::placeholder {
+    color: #ffb0fb;
+}
+
+.commands-search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #ff21cf;
+    width: 20%;
+    cursor: pointer;
+}
+
+.search-icon {
+    height: 70%;
+    width: 30%;
+}
+
+.commands-search-container:active {
+    border: 0.2vw solid #ff74e1;
+}
+
+.commands-search-button:active {
+    background-color: #ff3def;
+}
+
+.search-icon:active {
+    filter: brightness(0);
+}
+
+@media screen and (min-width: 37.5rem) {
+    .commands-search-container:hover {
+        border: 0.2vw solid #ff74e1;
+    }
+
+    .commands-search-button:hover {
+        background-color: #ff3def;
+    }
+
+    .search-icon:hover {
+        filter: brightness(0);
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+    .commands-search-bar {
+        height: 8vw;
+    }
+
+    .commands-search-container {
+        width: 70%;
+    }
+
+    .search-icon {
+        height: 70%;
+        width: 40%;
+    }
+}

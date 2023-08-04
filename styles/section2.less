@@ -1,0 +1,150 @@
+@import "../index.less";
+
+/*Section 2*/
+
+.section2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--section2BG);
+}
+
+.section2-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 2vw;
+    &:last-child {
+        padding-bottom: 4vw;
+    }
+}
+
+.section2-vertical {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 55%;
+}
+
+.section2-heading {
+    font-family: "Anton", sans-serif;
+    color: var(--section2Text);
+    text-align: center;
+    font-size: calc(30px + 4vw);
+    font-weight: 300;
+    padding-top: 2vw;
+}
+
+.section2-title {
+    font-family: "Chewy", sans-serif;
+    color: var(--section2Text);
+    font-size: calc(12px + 4vw);
+    font-weight: 200;
+    text-align: center;
+    padding-bottom: 3vw;
+}
+
+.section2-paragraph {
+    font-family: "Cousine", monospace;
+    color: var(--section2Text);
+    text-align: center;
+    font-size: calc(7px + 1.5vw);
+}
+
+.section2-hover:active {
+    color: #ff75b5;
+}
+
+.fanart {
+    height: 45%;
+    width: 45%;
+    position: relative;
+    z-index: 50;
+}
+
+.akashinewyear {
+    height: 55%;
+    width: 55%;
+}
+
+.laffeychibi {
+    height: 55%;
+    width: 55%;
+}
+
+@media screen and (max-width: 30rem) {
+    .section2-title {
+        font-size: 6vw;
+    }
+    
+    .section2-paragraph {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 15rem) {
+    .section2-title {
+        font-size: 4vw;
+    }
+    
+    .section2-paragraph {
+        font-size: 2vw;
+    }
+
+    .section2-vertical {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 37.5rem) {
+    .section2-hover:hover {
+        color: #ff75b5;
+    }
+}
+
+@media screen and (min-width: 50rem) {
+    .section2-vertical {
+        width: 50%;
+    }
+
+    .fanart {
+        height: 35%;
+        width: 35%;
+    }
+    
+    .akashinewyear {
+        height: 45%;
+        width: 45%;
+    }
+    
+    .laffeychibi {
+        height: 45%;
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 63.5rem) {
+    .section2-container {
+        padding-top: 0vw;
+        margin-bottom: -4vw;
+        &:last-child {
+            margin-bottom: -2vw;
+        }
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    .section2-container {
+        margin-bottom: -8vw;
+        &:last-child {
+            margin-bottom: -4vw;
+        }
+    }
+
+    .hammann {
+        margin-top: 4vw;
+    }
+}

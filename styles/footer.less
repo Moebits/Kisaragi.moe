@@ -1,0 +1,165 @@
+@import "../index.less";
+
+/*Footer*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 3vw;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+}
+
+.other-links {
+    margin-top: -5vw;
+}
+
+.navigation {
+    align-items: flex-start;
+}
+
+.invitebot:active {
+    filter: hue-rotate(30deg);
+}
+
+.discord:active {
+    filter: hue-rotate(90deg) saturate(140%);
+}
+
+.github:active {
+    filter: brightness(50%) sepia(100) saturate(60) hue-rotate(-40deg);
+}
+
+.site-theme img:active {
+    filter: brightness(70%) sepia(100) saturate(60) hue-rotate(-40deg);
+}
+
+.footer-text {
+    color: #ff3dae;
+    font-family: "Skranji", cursive;
+    font-size: calc(5px + 3vw);
+    font-weight: 200;
+    text-align: center;
+    &:active {
+        color: #ff1764;
+    }
+}
+
+.footer-link {
+    list-style-type: none;
+    text-decoration: none;
+    color: #ff3dae;
+    font-family: "Skranji", cursive;
+    font-size: calc(5px + 1.5vw);
+    &:active {
+        color: white;
+    }
+}
+
+.footer-img {
+    height: 8vw;
+    width: 8vw;
+    margin-top: 1em;
+}
+
+.fanart-credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vw;
+    padding-bottom: 0.5vw;
+}
+
+.fanart-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vw;
+    padding-right: 4vw;
+}
+
+.fanart-header {
+    font-size: calc(10px + 4.5vw);
+}
+
+.laffeykimono {
+    height: 20%;
+    width: 20%;
+    &:active {
+        filter: brightness(110%);
+    }
+}
+
+@media screen and (min-width: 37.5rem) {
+    .invitebot:hover {
+        cursor: pointer;
+        filter: hue-rotate(30deg);
+    }
+    
+    .discord:hover {
+        cursor: pointer;
+        filter: hue-rotate(90deg) saturate(140%);
+    }
+    
+    .github:hover {
+        cursor: pointer;
+        filter: brightness(50%) sepia(100) saturate(60) hue-rotate(-40deg);
+    }
+    
+    .site-theme img:hover {
+        filter: brightness(70%) sepia(100) saturate(60) hue-rotate(-40deg);
+        cursor: pointer;
+    }
+
+    .footer-link:hover {
+        color: white;
+    }
+
+    .footer-text:hover {
+        color: #ff1764;
+    }
+}
+
+@media screen and (max-width: 20rem) {
+    .fanart-links li, .footer-li {
+        margin-top: -2vw;
+    }
+
+    .footer-link {
+        font-size:  calc(5px + 1vw);
+    }
+
+    .footer-text {
+        font-size: calc(5px + 3vw);
+    }
+
+    .fanart-header {
+        font-size: calc(10px + 2.5vw);
+    }
+}
+
+.copyright {
+    font-size: 1.2vw;
+    text-align: center;
+    padding-bottom: 0.5vw;
+}

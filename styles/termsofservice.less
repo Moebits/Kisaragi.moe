@@ -1,0 +1,307 @@
+@import "../index.less";
+
+/*Terms of Service*/
+.tos-container {
+    background-color: var(--tosContainer);
+    transition: all 1s;
+}
+
+.tos-container-blue {
+    background-color: var(--tosContainerBlue);
+}
+
+.tos-transition {
+    transition: none;
+}
+
+.tos-container-light {
+    background-color: rgba(0, 0, 0 , 0.1);
+}
+
+.terms-of-service {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.tos-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding-top: 2vw;
+    padding-bottom: 3vw;
+}
+
+.tos-header {
+    color: #ff21a2;
+    font-family: "Skranji", sans-serif;
+    padding-left: 1vw;
+    font-size: 5vw;
+}
+
+.tos-header-text-container {
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    margin-bottom: 2vw;
+    transition: filter 0.1s;
+    &:hover {
+        filter: brightness(0) invert(1);
+    }
+}
+
+.tos-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.tos-hr {
+    background-color: #ff26aa;
+    border: none;
+    height: 0.2rem;
+    border-radius: 3rem;
+    margin-bottom: 2vw;
+}
+
+.tos-paragraph {
+    color: #ff4ef9;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5vw;
+    padding-bottom: 2vw;
+}
+
+.tos-title {
+    color: #ff16db;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3vw;
+    padding-bottom: 1vw;
+    &:hover {
+        color: white;
+    }
+}
+
+.tos-list-title {
+    color: #ff16a6;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2vw;
+}
+
+.tos-list-detail {
+    color: #ff66d6;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5vw;
+    margin-left: 6vw;
+    &:last-child {
+        padding-bottom: 2vw;
+    }
+}
+
+details {
+    margin-top: -1vw;
+}
+
+summary {
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    span:hover {
+        color: white;
+        cursor: pointer;
+    }  
+    &::-webkit-details-marker {
+        display: none;
+    }
+}
+
+.tos-list-title:before {
+    content: url("../assets/icons/redarrow.png");
+    transform: scale(0.5);
+}
+
+details[open] .tos-list-title:before {
+    content: url("../assets/icons/redarrow.png");
+    transform: rotate(90deg) scale(0.5);
+}
+
+.hinako {
+    margin-right: 10vw;
+    width: 15%;
+    height: auto;
+}
+
+.mayuki {
+    margin-right: 8vw;
+    width: 20%;
+    height: auto;
+}
+
+.hinako:active, .mayuki:active {
+    filter: brightness(110%);
+}
+
+/*Privacy Policy*/
+
+.privacy-policy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.blue-select::selection {
+    background-color: #3268ff;
+}
+
+.privacy-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding-top: 2vw;
+    padding-bottom: 3vw;
+}
+
+.privacy-header {
+    color: #217fff;
+    font-family: "Skranji", sans-serif;
+    padding-left: 1vw;
+    font-size: 5vw;
+}
+
+.privacy-header-text-container {
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    margin-bottom: 2vw;
+    transition: filter 0.1s;
+}
+
+.privacy-header-text-container:hover {
+    filter: brightness(0) invert(1);
+}
+
+.privacy-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.privacy-hr {
+    background-color: #2661ff;
+    border: none;
+    height: 0.2rem;
+    border-radius: 3rem;
+    margin-bottom: 2vw;
+}
+
+.privacy-paragraph {
+    color: #4e86ff;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5vw;
+    padding-bottom: 2vw;
+}
+
+.privacy-title {
+    color: #168fff;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3vw;
+    padding-bottom: 1vw;
+    &:hover {
+        color: white;
+    }
+}
+
+.privacy-list-title {
+    color: #16a5ff;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2vw;
+}
+
+.privacy-list-detail {
+    color: #66aaff;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5vw;
+    margin-left: 6vw;
+    &:last-child {
+        padding-bottom: 2vw;
+    }
+}
+
+.privacy-list-title:before {
+    content: url("../assets/icons/bluearrow.png");
+    transform: scale(0.5);
+}
+
+details[open] .privacy-list-title:before {
+    content: url("../assets/icons/bluearrow.png");
+    transform: rotate(90deg) scale(0.5);
+}
+
+.tos-img {
+    width: 15%;
+    height: auto;
+}
+
+@media screen and (max-width: 60rem) {
+    .tos-vertical, .privacy-vertical {
+        width: 80%;
+    }
+    .tos-header, .privacy-header {
+        font-size: 5.2vw;
+    }
+    .tos-paragraph, .privacy-paragraph {
+        font-size: 2vw;
+    }
+    .tos-title, .privacy-title {
+        font-size: 4vw;
+    }
+    .tos-list-title, .privacy-list-title {
+        font-size: 3vw;
+    }
+    .tos-list-detail, .privacy-list-detail {
+        font-size: 2vw;
+    }
+    .tos-list-title:before, .privacy-list-title:before {
+        transform: scale(0.3);
+    }
+    details[open] .tos-list-title:before, details[open] .privacy-list-title:before {
+        transform: rotate(90deg) scale(0.3);
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+    .tos-vertical, .privacy-vertical {
+        width: 90%;
+    }
+    .tos-header, .privacy-header {
+        font-size: 7vw;
+    }
+    .tos-paragraph, .privacy-paragraph {
+        font-size: 2.5vw;
+    }
+    .tos-title, .privacy-title {
+        font-size: 5vw;
+    }
+    .tos-list-title, .privacy-list-title {
+        font-size: 4vw;
+    }
+    .tos-list-detail, .privacy-list-detail {
+        font-size: 3vw;
+    }
+    .hinako {
+        margin-right: 5vw;
+    }
+    
+    .mayuki {
+        margin-right: 3vw;
+    }
+    .tos-list-title:before, .privacy-list-title:before {
+        display: none;
+    }
+    details[open] .tos-list-title:before, details[open] .privacy-list-title:before {
+        display: none;
+    }
+}

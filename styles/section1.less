@@ -1,0 +1,137 @@
+@import "../index.less";
+
+/*Section 1*/
+
+.section1 {
+    display: flex;
+    background-color: #f6578a;
+    align-items: center;
+    flex-basis: 0;
+    animation: animate-bgcolor 5s infinite alternate;
+}
+
+.section1-vertical {
+    flex-direction: column;
+    margin-left: -7vw;
+    width: 50%;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue-button {
+    background-color: #079fff;
+    border: none;
+    filter: drop-shadow(.4vw .4vw 0vw black);
+    margin-bottom: 3vw;
+    padding: 1vw;
+    width: 25vw;
+    border: 0.4vw solid black;
+    &:hover {
+        background-color: #ff3cdf;
+        border: 0.4vw solid white;
+        cursor: pointer;
+    }
+}
+
+.button-text {
+    text-decoration: none;
+    font-size: 3vw;
+    text-align: center;
+    &:hover {
+        color: black;
+    }
+}
+
+.section1-text {
+    font-family: "Ranchers", sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+.section1-title {
+    text-align: center;
+    font-size: calc(10px + 4.5vw);
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    -webkit-text-stroke: 0.04em black;
+}
+
+.section1-paragraph {
+    text-align: center;
+    font-size: 2.5vw;
+    padding-bottom: 4vw;
+}
+
+@supports (paint-order: stroke fill) and (-webkit-text-stroke: 1px black) {
+    .stroke-title {
+        paint-order: stroke fill;
+        -webkit-text-stroke: 0.15em black;
+    }
+
+    .stroke-paragraph {
+        paint-order: stroke fill;
+        -webkit-text-stroke: 0.1em black;
+    }
+}
+
+.kisaragi {
+    height: auto;
+    width: 50%;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+@keyframes animate-bgcolor {
+    25% {background-color: #f657ce}
+    50% {background-color: #f657ce}
+    75% {background-color: #f657af}
+    100% {background-color: #f65799}
+}
+
+@media screen and (max-width: 37.5rem) {
+    .section1 {
+        flex-direction: column;
+    }
+
+    .kisaragi {
+        padding: 0;
+    }
+
+    .section1-vertical {
+        margin-left: 0;
+        width: 90%;
+    }
+
+    .section1-title {
+        padding-top: 0vw;
+        font-size: 10vw;
+    }
+
+    .section1-paragraph {
+        font-size: 5vw;
+    }
+
+    .button-text {
+        font-size: 7vw;
+    }
+
+    .blue-button, .blue-button:hover {
+        background-color: #079fff;
+        filter: drop-shadow(.5vw .5vw 0vw black);
+        margin-bottom: 6vw;
+        padding: 2vw;
+        width: 50vw;
+        border: 0.8vw solid black;
+    }
+    
+    .blue-button:active {
+        background-color: #ff3cdf;
+        border: 0.8vw solid white;
+    }
+}

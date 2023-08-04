@@ -1,0 +1,16 @@
+{
+    "short_name": "Kisaragi Bot",
+    "name": "Kisaragi Bot",
+    "description": "Kisaragi is an anime discord bot with a lot of features! She can search websites, play music, edit images, moderate your server, and offer various utilities for your server.",
+    "icons": [
+      {
+        "src": "assets/icons/favicon.gif",
+        "sizes": "128x128",
+        "type": "image/gif"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#ff4df6",
+    "background_color": "#000000"
+  }

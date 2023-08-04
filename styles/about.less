@@ -1,0 +1,139 @@
+@import "../index.less";
+
+.about {
+    background-color: var(--aboutBG);
+    padding-top: 1vw;
+    padding-right: 1vw;
+    padding-left: 2vw;
+    padding-bottom: 2vw;
+}
+
+.about-header {
+    color: #ff21a2;
+    font-family: "Skranji", sans-serif;
+    font-size: 5vw;
+    &:active, &:hover {
+        color: white;
+    }
+}
+
+.about-paragraph-container {
+    display: flex;
+    align-items: center;
+    margin-top: -3vw;
+}
+
+.about-paragraph {
+    color: #ff4ef9;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5vw;
+    margin-bottom: 2vw;
+    flex-wrap: wrap;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    padding-right: 10vw;
+    &:active {
+        filter: brightness(120%);
+    }
+}
+
+.about-link {
+    color: #ff1c7a;
+    font-family: "Skranji", sans-serif;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.5rem;
+    &:active, &:hover {
+        color: white;
+    }
+}
+
+.about-ul {
+    margin-top: -3vw;
+    list-style-type: none;
+}
+
+.about-list {
+    color: #ff2190;
+    font-family: "Skranji", sans-serif;
+    font-size: 2vw;
+    &::before {
+        content: url("../assets/icons/star.gif");
+        zoom: 0.12;
+        padding-right: 3.5vw;
+    }
+    span:active, span:hover {
+        color: white;
+    }
+}
+
+.about-header-small {
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    color: #ff33bb;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2vw;
+}
+
+.about-social-links {
+    list-style-type: none;
+}
+
+.about-social-link {
+    color: #ff2190;
+    font-family: "Skranji", sans-serif;
+    text-decoration: none;
+    font-size: 1.7vw;
+    &::before { 
+        content: url("../assets/icons/star.gif");
+        zoom: 0.12;
+        padding-right: 3.5vw;
+    }
+    span:active, span:hover {
+        color: white;
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+    .about {
+        padding-bottom: 5vw;
+    }
+    .about-paragraph-container {
+        flex-direction: column-reverse;
+    }
+    .about-img {
+        width: 50%;
+        height: 50%;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+    .about-header {
+        font-size: 10vw;
+        text-align: center;
+        margin-left: -4vw;
+    }
+    .about-paragraph {
+        font-size: 3.5vw;
+        margin-bottom: 6vw;
+    }
+    .about-list {
+        font-size: 4vw;
+        &::before { 
+            zoom: 0.1;
+        }
+    }
+    .about-header-small {
+        margin-top: 4vw;
+        margin-bottom: 4vw;
+        font-size: 4vw;
+    }
+    .about-social-link {
+        font-size: 4vw;
+        &::before { 
+            zoom: 0.1;
+        }
+    }
+}

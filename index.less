@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+    --section2BG: white;
+    --section2Text: black;
+    --background404: #f96b98;
+    --text404: black;
+    --image404: none;
+    --tosContainer: #6b3b61;
+    --tosContainerBlue: #564166;
+    --commandsBackground: #fffafc;
+    --commandsText: black;
+    --aboutBG: white;
+}
+
+.dark-theme {
+    --section2BG: #080808;
+    --section2Text: white;
+    --background404: #020202;
+    --text404: white;
+    --image404: 0.2vw solid white;
+    --tosContainer: #12000e;
+    --tosContainerBlue: #0a0012;
+    --commandsBackground: #050505;
+    --commandsText: #ffffff;
+    --aboutBG: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    width: 100%;
+    background-color: black;
+    position: relative;
+    z-index: -1000;
+    -webkit-touch-callout: none;
+}
+
+::selection {
+    background-color: #ffbfdd;
+}
+
+
+::-webkit-scrollbar {
+    width: 1vw;
+}
+  
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5a5a5a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #303030;
+}
+
+.no-deco {
+    text-decoration: none;
+}
+
+.back-to-top {
+    display: none;
+    position: fixed; 
+    bottom: 1.5rem; 
+    right: 2rem; 
+    z-index: 2000; 
+    cursor: pointer; 
+}
+
+.back-to-top:hover {
+    filter: brightness(0) invert(1);
+}

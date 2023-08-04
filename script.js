@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "1a49ee18a10fbcfa4741";
+/******/ 	var hotCurrentHash = "0a8bba331c30c495a32e";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1993,22 +1993,7 @@ var about = __webpack_require__("WYX5");
 /* harmony default export */ var postgresql = (__webpack_require__.p + "assets/icons/postgresql.png");
 // CONCATENATED MODULE: ./assets/icons/react.png
 /* harmony default export */ var icons_react = (__webpack_require__.p + "assets/icons/react.png");
-// CONCATENATED MODULE: ./assets/icons/youtube.png
-/* harmony default export */ var youtube = (__webpack_require__.p + "assets/icons/youtube.png");
-// CONCATENATED MODULE: ./assets/icons/twitter.png
-/* harmony default export */ var twitter = (__webpack_require__.p + "assets/icons/twitter.png");
-// CONCATENATED MODULE: ./assets/icons/soundcloud.png
-/* harmony default export */ var soundcloud = (__webpack_require__.p + "assets/icons/soundcloud.png");
-// CONCATENATED MODULE: ./assets/icons/pixiv.png
-/* harmony default export */ var pixiv = (__webpack_require__.p + "assets/icons/pixiv.png");
-// CONCATENATED MODULE: ./assets/icons/github-hover.png
-/* harmony default export */ var github_hover = (__webpack_require__.p + "assets/icons/github-hover.png");
 // CONCATENATED MODULE: ./components/About.tsx
-
-
-
-
-
 
 
 
@@ -2066,34 +2051,7 @@ class About_About extends react["Component"] {
                         react_default.a.createElement("li", { className: "about-list" },
                             react_default.a.createElement("span", null, "Website: React.js"),
                             " ",
-                            react_default.a.createElement("img", { src: icons_react, width: "30", height: "30" }))),
-                    react_default.a.createElement("h3", { className: "about-header-small" }, "Like this project? You can find me elsewhere online!"),
-                    react_default.a.createElement("ul", { className: "about-social-links" },
-                        react_default.a.createElement("li", null,
-                            react_default.a.createElement("a", { href: "https://www.youtube.com/channel/UC8qU4aFe81jzG1attsyQ5wQ", target: "_blank", className: "about-social-link" },
-                                react_default.a.createElement("span", null, "Youtube"),
-                                " ",
-                                react_default.a.createElement("img", { src: youtube, width: "30", height: "30" }))),
-                        react_default.a.createElement("li", null,
-                            react_default.a.createElement("a", { href: "https://twitter.com/tenpimoe", target: "_blank", className: "about-social-link" },
-                                react_default.a.createElement("span", null, "Twitter"),
-                                " ",
-                                react_default.a.createElement("img", { src: twitter, width: "30", height: "30" }))),
-                        react_default.a.createElement("li", null,
-                            react_default.a.createElement("a", { href: "https://soundcloud.com/tenpi", target: "_blank", className: "about-social-link" },
-                                react_default.a.createElement("span", null, "Soundcloud"),
-                                " ",
-                                react_default.a.createElement("img", { src: soundcloud, width: "30", height: "30" }))),
-                        react_default.a.createElement("li", null,
-                            react_default.a.createElement("a", { href: "https://www.pixiv.net/en/users/35096162", target: "_blank", className: "about-social-link" },
-                                react_default.a.createElement("span", null, "Pixiv"),
-                                " ",
-                                react_default.a.createElement("img", { src: pixiv, width: "30", height: "30" }))),
-                        react_default.a.createElement("li", null,
-                            react_default.a.createElement("a", { href: "https://github.com/Tenpi", target: "_blank", className: "about-social-link" },
-                                react_default.a.createElement("span", null, "Github"),
-                                " ",
-                                react_default.a.createElement("img", { src: github_hover, width: "30", height: "30" }))))),
+                            react_default.a.createElement("img", { src: icons_react, width: "30", height: "30" })))),
                 react_default.a.createElement(Footer_Footer, { reRender: this.props.reRender })));
         };
     }
@@ -5504,7 +5462,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1684983768467
+      // 1691185147903
       var cssReload = __webpack_require__("odzT")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -17434,7 +17392,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1684983768772
+      // 1691185148258
       var cssReload = __webpack_require__("odzT")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -17921,7 +17879,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1684983768689
+      // 1691185148218
       var cssReload = __webpack_require__("odzT")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -19907,7 +19865,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1684983768718
+      // 1691185148263
       var cssReload = __webpack_require__("odzT")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -20199,7 +20157,7 @@ exports.unstable_wrap=function(e){function d(){var d=exports.__interactionsRef.c
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1684983768719
+      // 1691185148264
       var cssReload = __webpack_require__("odzT")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -20849,7 +20807,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1684983768634
+      // 1691185148192
       var cssReload = __webpack_require__("odzT")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -20881,7 +20839,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1684983768535
+      // 1691185147968
       var cssReload = __webpack_require__("odzT")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -22099,7 +22057,7 @@ var isArray = Array.isArray || function (xs) {
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1684983768544
+      // 1691185148024
       var cssReload = __webpack_require__("odzT")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -24051,7 +24009,7 @@ if (true) {
 
 // extracted by mini-css-extract-plugin
     if(true) {
-      // 1684983768646
+      // 1691185148173
       var cssReload = __webpack_require__("odzT")(module.i, {"hmr":true,"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);

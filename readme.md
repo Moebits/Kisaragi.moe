@@ -1,6 +1,6 @@
 ## Kisaragi Website
 
-![Kisaragi](https://github.com/Pripy/kisaragi.moe/blob/master/assets/images/website-img.png?raw=true)
+![Kisaragi](https://github.com/Pripy/kisaragi.moe/blob/main/assets/images/website-img.png?raw=true)
 
 https://kisaragi.moe/
 

@@ -27,7 +27,6 @@ app.set("trust proxy", true)
 if (process.env.TESTING === "yes") {
   dotenv.config()
   app.use(middleware(compiler, {
-    noInfo: true,
     serverSideRender: true,
     writeToDisk: false
   }))
@@ -54,4 +53,4 @@ app.get("*", function(req, res) {
   }
 })
 
-app.listen(process.env.PORT || 8080, () => console.log("Started the website server!"))
+app.listen(process.env.PORT || 8090, () => console.log("Started the website server!"))

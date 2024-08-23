@@ -50,14 +50,14 @@ const writePictures = () => {
       const files = fs.readdirSync(folderPath)
       for (let j = 0; j < files.length; j++) {
           if (files[j] === "files.json") continue
-          images.push(encodeURI(`https://kisaragi.moe/${folders[i]}/${path.basename(files[j])}`))
+          images.push(encodeURI(`https://kisaragi.moe/assets/waifu/${folders[i]}/${path.basename(files[j])}`))
       }
       indexImages.push(...images)
       fs.writeFileSync(path.join(folderPath, "files.json"), JSON.stringify(images, undefined, 4))
   }
   fs.writeFileSync(path.join(indexPath, "files.json"), JSON.stringify(indexImages, undefined, 4))
 }
-//writePictures()
+writePictures()
 
 app.get("*", function(req, res) {
   res.setHeader("Content-Type", mime.getType(req.path) ?? "")

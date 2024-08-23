@@ -11,7 +11,8 @@
     "bundle-web": "webpack --env platform=web",
     "bundle-server": "webpack --env platform=server",
     "postfix": "node postfix.js",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && npm run waifu",
+    "waifu": "cp -r assets/waifu dist/assets/waifu",
     "deploy": "gh-pages -d dist",
     "clean": "del-cli ./dist"
   },

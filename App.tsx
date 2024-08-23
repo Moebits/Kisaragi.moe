@@ -8,6 +8,9 @@ import About from "./components/About"
 import ScrollToTop from "./components/ScrollToTop"
 import "./index.less"
 import functions from "./structures/Functions"
+
+require.context("./assets/icons", true)
+
 export default class App extends Component {
   public reRender = () => {
     this.forceUpdate()

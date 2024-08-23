@@ -12,9 +12,6 @@
     color: #ff21a2;
     font-family: "Skranji", sans-serif;
     font-size: 5vw;
-    &:active, &:hover {
-        color: white;
-    }
 }
 
 .about-paragraph-container {
@@ -56,17 +53,21 @@
     list-style-type: none;
 }
 
-.about-list {
+.about-list {  
+    display: flex;
+    align-items: center;
     color: #ff2190;
     font-family: "Skranji", sans-serif;
     font-size: 2vw;
     &::before {
         content: url("../assets/icons/star.gif");
         zoom: 0.12;
-        padding-right: 3.5vw;
+        padding-right: 5vw;
+        padding-left: 3.5vw;
+        scale: 4;
     }
-    span:active, span:hover {
-        color: white;
+    span {
+        margin-right: 0.5vw;
     }
 }
 

@@ -63,7 +63,7 @@ export default class Footer extends Component<Props, State> {
                 </div>
                 <img src={laffeyKimono} alt="Laffey Kimono" height="591" width="244" className="laffeykimono no-ios-preview"/>
             </div>
-            <h5 className="footer-text copyright">Copyright © {new Date().getFullYear()} Moepi</h5>
+            <h5 className="footer-text copyright">Copyright © {new Date().getFullYear()} Moebits</h5>
             </>
         )
     }
@@ -106,7 +106,6 @@ export default class Footer extends Component<Props, State> {
                             <h3 className="footer-text">Other Links</h3>
                             <ul>
                                 <li className="footer-li"><a href="https://top.gg/bot/593838271650332672/vote" className="footer-link" target="_blank">Upvote</a></li>
-                                <li className="footer-li"><a href="https://bots.ondiscord.xyz/bots/593838271650332672/review" className="footer-link" target="_blank">Review</a></li>
                             </ul>
                         </div>
                     </div>

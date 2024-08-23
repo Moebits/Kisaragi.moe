@@ -75,7 +75,7 @@ export default class TermsOfService extends Component<Props, State> {
                         <h3 className="tos-title">Bot Spam and Misuse</h3>
                         <details className="tos-details" open>
                             <summary ref={func.animateSummary} className="tos-list-title"><span>Content</span></summary>
-                            <p className="tos-list-detail">Everything posted by the bot falls under your responsibility, not the bots or developer. If the bot posts something "questionable" it's because of the input you gave it. An effort is made to filter such content, but it's infeasible to filter everything on the internet.</p>
+                            <p className="tos-list-detail">Everything posted by the bot falls under your responsibility, not the bot or developer. I do make an effort to filter content but the nature of many commands is retrieving arbitrary data from the internet.</p>
                         </details>
                         <details className="tos-details" open>
                             <summary ref={func.animateSummary} className="tos-list-title"><span>API Spam</span></summary>
@@ -87,16 +87,16 @@ export default class TermsOfService extends Component<Props, State> {
                         </details>
                         <details className="tos-details" open>
                             <summary ref={func.animateSummary} className="tos-list-title"><span>Oauth2</span></summary>
-                            <p className="tos-list-detail">Don't abuse oauth2 commands or share oauth2 links created by the bot.</p>
+                            <p className="tos-list-detail">Don't misuse oauth2 commands or share oauth2 links created by the bot.</p>
                         </details>
                         <details className="tos-details" open>
                             <summary ref={func.animateSummary} className="tos-list-title"><span>Abusing Bugs</span></summary>
-                            <p className="tos-list-detail">Don't abuse any bugs that may crash the bot. Please report these bugs with the <span className="command">feedback</span> command.</p>
+                            <p className="tos-list-detail">There could be bugs that crash the bot. Please report these bugs with the <span className="command">feedback</span> command.</p>
                         </details>
                         <h3 className="tos-title">Punishment</h3>
                         <p className="tos-paragraph">Violating the TOS could result in you or your entire guild getting blacklisted (blocked from using any commands and blocked from adding the bot to a server).</p>
                         <h3 className="tos-title">Appeal</h3>
-                        <p className="tos-paragraph">Contact Tenpi#2283 through a private message. If you get blacklisted again after being forgiven, you will not be forgiven again.</p>
+                        <p className="tos-paragraph">You can contact me in the support server for an appeal after significant time has passed after your blacklist.</p>
                     </div>
                 </section>
 
@@ -110,20 +110,20 @@ export default class TermsOfService extends Component<Props, State> {
                             <img src={mayukiChibi} width="172" height="187" className="blue-select mayuki"/>
                         </div>
                         <hr className="privacy-hr blue-select"/>
-                        <p className="privacy-paragraph blue-select">This Privacy Policy concerns the data that Kisaragi ("she", "her", "the bot") collects about you and your server. If you do not agree kick the bot or leave the server.</p>
+                        <p className="privacy-paragraph blue-select">This Privacy Policy concerns the data that Kisaragi ("she", "her", "the bot") collects about you and your server. You should remove the bot from your server if you don't agree.</p>
                         <h3 className="privacy-title blue-select">Public Information</h3>
                         <details className="privacy-details" open>
                             <summary ref={func.animateSummary} className="privacy-list-title"><span className="blue-select">Messages</span></summary>
-                            <p className="privacy-list-detail blue-select">Several commands read your message content/attachments, and deleted messages may be logged if message logging is enabled. The bot only uses this information to provide the command functionality and it does not store any messages or attachments outside of Discord.</p>
+                            <p className="privacy-list-detail blue-select">Several commands read your message content/attachments, and deleted messages may be logged if message logging is enabled. The bot only uses this information to provide the command functionality and does not store any messages.</p>
                         </details>
                         <details className="privacy-details" open>
-                            <summary ref={func.animateSummary} className="privacy-list-title"><span className="blue-select">Guild-Related</span></summary>
-                            <p className="privacy-list-detail blue-select">The bot collects public information of every guild that she is on, including but not limited to: guild name, members, roles, channels, and emojis.</p>
+                            <summary ref={func.animateSummary} className="privacy-list-title"><span className="blue-select">Guilds</span></summary>
+                            <p className="privacy-list-detail blue-select">Kisaragi has access to information about every guild she is on, including channels, members, roles, and emojis. She only uses this information as required to provide command functionality.</p>
                         </details>
                         <h3 className="privacy-title blue-select">Private Information (Oauth2 Only)</h3>
                         <details className="privacy-details" open>
                             <summary ref={func.animateSummary} className="privacy-list-title"><span className="blue-select">Email Address</span></summary>
-                            <p className="privacy-list-detail blue-select">Your discord email address is used to send you email from the <span className="command blue-select">email</span> command. This is to verify that the address belongs to you, and also to protect your privacy by not having to write your email when invoking the command.</p>
+                            <p className="privacy-list-detail blue-select">Your discord email address is used to send you email from the <span className="command blue-select">email</span> command. This is to verify that the address belongs to you.</p>
                         </details>
                         <details className="privacy-details" open>
                             <summary ref={func.animateSummary} className="privacy-list-title"><span className="blue-select">Connections</span></summary>

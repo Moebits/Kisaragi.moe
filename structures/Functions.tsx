@@ -190,5 +190,5 @@ export default class Functions {
         lastClientY = event.clientY
         scrollElement.scrollTop -= newScrollY
     }, false)
-}
+  }
 }

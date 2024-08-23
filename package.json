@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run build && npm run web",
     "web": "node --max_old_space_size=4096 dist/server.js",
-    "build": "npm run clean && npm run bundle-web && npm run bundle-server && npm run postfix",
+    "build": "npm run clean && npm run bundle-web && npm run bundle-server && npm run cname && npm run postfix",
+    "cname": "echo \"kisaragi.moe\" > dist/CNAME",
     "bundle-web": "webpack --env platform=web",
     "bundle-server": "webpack --env platform=server",
     "postfix": "node postfix.js",

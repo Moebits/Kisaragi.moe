@@ -57,6 +57,7 @@ const writePictures = () => {
   }
   fs.writeFileSync(path.join(indexPath, "files.json"), JSON.stringify(indexImages, undefined, 4))
 }
+
 writePictures()
 
 app.get("*", function(req, res) {

@@ -162,6 +162,15 @@
         "cooldown": 10
     },
     {
+        "command": "animebooks",
+        "category": "anime",
+        "description": "Anime girls holding programming books.",
+        "help": "animebooks - Get any books\nanimebooks language - Searches for books in the language",
+        "aliases": "books, animegirlbooks, animegirlsholdingprogrammingbooks",
+        "examples": "=>animebooks\n=>animebooks javascript\n=>animebooks c",
+        "cooldown": 10
+    },
+    {
         "command": "animequote",
         "category": "anime",
         "description": "Posts a random anime quote.",
@@ -174,7 +183,7 @@
         "command": "books",
         "category": "anime",
         "description": "Anime girls holding programming books.",
-        "help": "books language - Searches for an anime with the query.",
+        "help": "books language - Searches for books in the language",
         "aliases": "book, programmingbooks, animegirlbooks, animegirlsholdingbooks, animegirlsholdingprogrammingbooks",
         "examples": "=>books\n=>books javascript\n=>books c",
         "cooldown": 10
@@ -201,7 +210,7 @@
         "command": "kitsune",
         "category": "anime",
         "description": "Post a picture of a fox girl.",
-        "help": "kitsune - Gets a random sfw image.\nkitsune ecchi - Gets a random ecchi image.\nkitsune lewd - Gets a random nsfw image.",
+        "help": "kitsune - Gets a random image.",
         "aliases": "k, foxgirl",
         "examples": "=>kitsune",
         "cooldown": 10
@@ -219,7 +228,7 @@
         "command": "neko",
         "category": "anime",
         "description": "Posts images of catgirls.",
-        "help": "_Note: Different tags are separated by comma._\nneko - Posts random neko images.\nneko tags - Searches for images matching the tags.\nneko lewd - Posts random nsfw neko images.\nneko lewd tags - Searches for nsfw images matching the tags.\nneko gif - Posts a random neko gif.\nneko gif lewd - Posts a random nsfw neko gif.",
+        "help": "_Note: Different tags are separated by comma._\nneko - Posts random neko images.\nneko tags - Searches for images matching the tags.\nneko gif - Posts a random neko gif.\nneko gif lewd - Posts a random nsfw neko gif.",
         "aliases": "nekos, catgirl, catgirls",
         "examples": "=>neko\n=>neko :o\n=>neko lewd",
         "cooldown": 10
@@ -273,9 +282,9 @@
         "command": "cache",
         "category": "bot developer",
         "description": "Deletes cached embeds from the database.",
-        "help": "This command is not documented.",
+        "help": "cache pixiv? - Deletes embeds and optionally pixiv embeds.",
         "aliases": "none",
-        "examples": "There are no examples.",
+        "examples": "=>cache",
         "cooldown": 3
     },
     {
@@ -317,10 +326,10 @@
     {
         "command": "flush",
         "category": "bot developer",
-        "description": "Flushes all redis keys.",
-        "help": "This command is not documented.",
+        "description": "Flushes cached data.",
+        "help": "flush - Flushes the redis keys.\nflush embed - Flushes the cached embeds.\nflush pixiv - Flushes the pixiv embeds.",
         "aliases": "none",
-        "examples": "There are no examples.",
+        "examples": "=>flush",
         "cooldown": 3
     },
     {
@@ -371,29 +380,29 @@
     {
         "command": "order",
         "category": "bot developer",
-        "description": "Orders the rows in the database.",
+        "description": "Orders the rows in the guilds table.",
         "help": "This command is not documented.",
         "aliases": "none",
         "examples": "There are no examples.",
         "cooldown": 3
     },
     {
+        "command": "reboot",
+        "category": "bot developer",
+        "description": "Reboots the bot.",
+        "help": "This command is not documented.",
+        "aliases": "restart",
+        "examples": "There are no examples.",
+        "cooldown": 100
+    },
+    {
         "command": "refresh",
         "category": "bot developer",
         "description": "Refreshes all commands and events.",
-        "help": "refresh - Refreshes all commands and events, without needing to restart the bot.\nrefresh command - Only re-compiles the specific command, greatly improving command speed.",
+        "help": "refresh - Refreshes all commands and events, without needing to restart the bot.",
         "aliases": "reload",
         "examples": "=>refresh",
         "cooldown": 50
-    },
-    {
-        "command": "restart",
-        "category": "bot developer",
-        "description": "Restarts the bot.",
-        "help": "This command is not documented.",
-        "aliases": "reboot",
-        "examples": "There are no examples.",
-        "cooldown": 100
     },
     {
         "command": "set",
@@ -403,24 +412,6 @@
         "aliases": "none",
         "examples": "=>set watching anime, dnd",
         "cooldown": 3
-    },
-    {
-        "command": "setavatar",
-        "category": "bot developer",
-        "description": "Changes the bot's avatar.",
-        "help": "setavatar url? - Sets the avatar.",
-        "aliases": "setav",
-        "examples": "=>setavatar",
-        "cooldown": 5
-    },
-    {
-        "command": "setname",
-        "category": "bot developer",
-        "description": "Changes the bot's username.",
-        "help": "setname name - Sets the username.",
-        "aliases": "setusername",
-        "examples": "=>setname kisaragi",
-        "cooldown": 5
     },
     {
         "command": "sql",
@@ -621,15 +612,6 @@
         "cooldown": 3
     },
     {
-        "command": "chucknorris",
-        "category": "fun",
-        "description": "Fetches chuck norris jokes.",
-        "help": "chucknorris - Gets random jokes.\nchucknorris - Gets the joke from the id.",
-        "aliases": "none",
-        "examples": "=>chucknorris",
-        "cooldown": 5
-    },
-    {
         "command": "coin",
         "category": "fun",
         "description": "Flips a coin.",
@@ -695,8 +677,8 @@
     {
         "command": "pickle",
         "category": "fun",
-        "description": "Posts your pickle size <:tohruSmug:682965978992214038>",
-        "help": "_Note:_ The sizes are seeded and won't change <:tohruSmug:682965978992214038>\npickle - Gets your pickle size.\npickle @user - Gets the pickle size of the user.",
+        "description": "Posts your pickle size null",
+        "help": "_Note:_ The sizes are seeded and won't change null\npickle - Gets your pickle size.\npickle @user - Gets the pickle size of the user.",
         "aliases": "pp, peepee, hotdog, dong, cock, dick, penis, sausage, fun stick, schlong, willy, ding dong, peen, meat stick",
         "examples": "=>pickle",
         "cooldown": 3
@@ -756,30 +738,12 @@
         "cooldown": 3
     },
     {
-        "command": "yomomma",
-        "category": "fun",
-        "description": "Gets a yo momma joke.",
-        "help": "yomomma - Gets a joke.",
-        "aliases": "yomom, yomama",
-        "examples": "=>yomomma",
-        "cooldown": 5
-    },
-    {
         "command": "azurlane",
         "category": "game",
         "description": "Gets information on an azur lane ship girl.",
         "help": "azurlane shipgirl - Gets information on the shipgirl.\nazurlane - Gets some handpicked girls.",
         "aliases": "al",
         "examples": "=>azurlane kisaragi\n=>azurlane laffey",
-        "cooldown": 10
-    },
-    {
-        "command": "gd",
-        "category": "game",
-        "description": "Searches for geometry dash players and levels.",
-        "help": "gd query - Searches for levels with the query\ngd user name - Gets the profile of a user\ngd daily - Gets the daily level\ngd weekly - Gets the weekly demon\ngd top 100/friends/global/creators - Fetches the specified leaderboard",
-        "aliases": "none",
-        "examples": "=>gd anime\n=>gd user tenpi\n=>gd top creators",
         "cooldown": 10
     },
     {
@@ -1074,7 +1038,7 @@
         "command": "waifu2x",
         "category": "image",
         "description": "Upscales an image with waifu2x.",
-        "help": "Note: If the bot isn't on a windows machine it won't work.\nwaifu2x - Scales the first image found above (up to 20 messages)\nwaifu2x url -Scales the image from the url",
+        "help": "waifu2x - Upscales the first image found above\nwaifu2x url - Upscales the image from the url\nwaifu2x cugan url? - Changes the upscaler to real-cugan\nwaifu2x esrgan url? - Changes the upscaler to real-esrgan\nwaifu2x anime4k url? - Changes the upscaler to anime4k",
         "aliases": "2x",
         "examples": "=>waifu2x",
         "cooldown": 30
@@ -1327,7 +1291,7 @@
         "category": "weeb",
         "description": "Translates text to another language.",
         "help": "translate code text - Translates the text into the given language (2 letter code)\ntranslate text - Translates the text to english\njapanese text - Special alias for japanese translation",
-        "aliases": "tr, trans, japanese",
+        "aliases": "tr, trans, japanese, jp",
         "examples": "=>translate ja translate this to japanese\n=>translate これを日本語に翻訳する\n=>japanese this will be translated to japanese",
         "cooldown": 5
     },
@@ -1413,15 +1377,6 @@
         "cooldown": 20
     },
     {
-        "command": "hentaigasm",
-        "category": "lewd",
-        "description": "Search for hentai on hentaigasm.",
-        "help": "hentaigasm - Gets the front page results.\nhentaigasm query - Gets hentai from the query.",
-        "aliases": "none",
-        "examples": "=>hentaigasm love 2 quad",
-        "cooldown": 20
-    },
-    {
         "command": "konachan",
         "category": "lewd",
         "description": "Searches for anime pictures on konachan.",
@@ -1470,7 +1425,7 @@
         "command": "chain",
         "category": "misc",
         "description": "Runs multiple commands in succession.",
-        "help": "_Note: The limit is 10 commands (to prevent abuse). This can be used to quickly set options such as reaction roles._\nchain cmd1 & cmd2 - Run multiple commands separated by \"&\"",
+        "help": "_Note: The limit is 5 commands (to prevent abuse). This can be used to quickly set options such as reaction roles._\nchain cmd1 & cmd2 - Run multiple commands separated by \"&\"",
         "aliases": "none",
         "examples": "=>chain holiday & mention kurisumasu\n=>chain kawaii & kitsune & neko\n=>chain reactionroles [messageID] @role1 !emoji1! & reactionroles [messageID] @role2 !emoji2!",
         "cooldown": 200
@@ -1658,7 +1613,7 @@
     {
         "command": "ping",
         "category": "misc 2",
-        "description": "Ping.",
+        "description": "Posts the response time.",
         "help": "ping - Posts the response time",
         "aliases": "none",
         "examples": "=>ping",
@@ -1966,9 +1921,9 @@
         "category": "music",
         "description": "Plays any song from soundcloud, youtube, a link, or an attachment.",
         "help": "_Note: You must be in a voice channel._\nplay - Plays the default songs.\nplay song - Searches for songs on soundcloud and plays the one that you pick.\nplay yt song - Searches for songs on youtube and plays the one that you pick.\nplay first yt? song - Plays the first result automatically.\nplay reverse yt? song - Starts playback in reverse mode.\nplay loop yt? song - Starts playback in loop mode.\nplay sc song - You don't need to specify soundcloud, since it's the default.",
-        "aliases": "stream",
+        "aliases": "pl, stream",
         "examples": "=>play reverse first synthion comet\n=>play virtual riot\n=>play yt tenpi moonlight",
-        "cooldown": 30
+        "cooldown": 15
     },
     {
         "command": "queue",
@@ -1995,7 +1950,7 @@
         "help": "reverse - Reverses the song that is playing.\nreverse link/query - An alias for play reverse\nreverse download/dl - Applies the effect on an mp3 attachment and uploads it.",
         "aliases": "none",
         "examples": "=>reverse",
-        "cooldown": 20
+        "cooldown": 15
     },
     {
         "command": "rewind",
@@ -2253,7 +2208,7 @@
         "command": "bassboost",
         "category": "music 3",
         "description": "Preset for lowshelf (500Hz, +5db).",
-        "help": "bassboost - Applies bass boosting (lowshelf 5 500 100)",
+        "help": "bassboost - Applies bass boosting (lowshelf 10 500 100)",
         "aliases": "bass",
         "examples": "=>bassboost",
         "cooldown": 20
@@ -2265,15 +2220,6 @@
         "help": "connect channel/mention/id? - Joins the channel you are in, or the channel mentioned.",
         "aliases": "join",
         "examples": "=>connect",
-        "cooldown": 10
-    },
-    {
-        "command": "join",
-        "category": "music 3",
-        "description": "Joins a voice channel.",
-        "help": "join channel/mention/id? - Joins the channel you are in, or the channel mentioned.",
-        "aliases": "connect",
-        "examples": "=>join",
         "cooldown": 10
     },
     {
@@ -2301,15 +2247,6 @@
         "help": "trebleboost - Applies treble boosting (highshelf 5 1000 100)",
         "aliases": "treble",
         "examples": "=>trebleboost",
-        "cooldown": 20
-    },
-    {
-        "command": "voice",
-        "category": "music 3",
-        "description": "Toggles command voice recognition on or off.",
-        "help": "_Note: When you speak in a voice channel with the bot, you can trigger commands with your voice._\nvoice - Toggles voice recognition on or off",
-        "aliases": "voicerecognition",
-        "examples": "=>voice",
         "cooldown": 20
     },
     {
@@ -2538,15 +2475,6 @@
         "cooldown": 10
     },
     {
-        "command": "crunchydl",
-        "category": "video",
-        "description": "Downloads the subs of an anime episode from Crunchyroll.",
-        "help": "crunchydl query epNum?/url - Downloads the subs of the anime episode by url/query.",
-        "aliases": "animedl, animedownload, crunchydownload",
-        "examples": "=>crunchydl dragon maid 1\n=>crunchydl konosuba 6\n=>crunchydl kiniro mosaic 5",
-        "cooldown": 200
-    },
-    {
         "command": "gifspeed",
         "category": "video",
         "description": "Speeds up a gif by constraining the amount of frames.",
@@ -2592,12 +2520,12 @@
         "cooldown": 20
     },
     {
-        "command": "ytdl",
+        "command": "ytmp3",
         "category": "video",
         "description": "Short alias for youtube download mp3.",
-        "help": "ytdl url/query - Downloads the video mp3",
+        "help": "ytmp3 url/query - Downloads the video mp3",
         "aliases": "youtube download",
-        "examples": "=>ytdl https://youtu.be/mLJQ0HO5Alc",
+        "examples": "=>ytmp3 https://youtu.be/mLJQ0HO5Alc",
         "cooldown": 20
     },
     {
@@ -2679,6 +2607,15 @@
         "help": "kisaragi - Posts kisaragi pictures.",
         "aliases": "none",
         "examples": "=>kisaragi",
+        "cooldown": 10
+    },
+    {
+        "command": "klee",
+        "category": "waifu",
+        "description": "Posts pictures of klee.",
+        "help": "klee - Posts klee pictures.",
+        "aliases": "none",
+        "examples": "=>klee",
         "cooldown": 10
     },
     {
@@ -2946,9 +2883,9 @@
         "command": "crunchyroll",
         "category": "website 2",
         "description": "Searches for an anime on crunchyroll.",
-        "help": "crunchyroll url/query - Searches crunchyroll for the url/query.\ncrunchyroll download/dl url/query - This is an alias for the command crunchydl.",
+        "help": "crunchyroll url/query - Searches crunchyroll for the url/query.",
         "aliases": "cr, crunchy",
-        "examples": "=>crunchyroll kiniro mosaic\n=>crunchyroll konosuba\n=>crunchyroll download is the order a rabbit 3",
+        "examples": "=>crunchyroll kiniro mosaic\n=>crunchyroll konosuba",
         "cooldown": 10
     },
     {
@@ -3015,15 +2952,6 @@
         "cooldown": 5
     },
     {
-        "command": "newgrounds",
-        "category": "website 2",
-        "description": "Searches for audio, art, movies, games, and users on newgrounds.",
-        "help": "newgrounds query - Searches newgrounds and returns the results.\nnewgrounds art query - Searches for art on newgrounds.\nnewgrounds audio query - Searches for audio on newgrounds.\nnewgrounds movie query - Searches for movies on newgrounds.\nnewgrounds game query - Searches for games on newgrounds.\nnewgrounds user query - Searches for users on newgrounds.\nnewgrounds url - Gets the submission from the url.",
-        "aliases": "ng",
-        "examples": "=>newgrounds audio tenpi\n=>newgrounds art anime\n=>newgrounds user tenpi",
-        "cooldown": 10
-    },
-    {
         "command": "npm",
         "category": "website 2",
         "description": "Searches for packages on the npm registry.",
@@ -3081,19 +3009,10 @@
         "command": "youtube",
         "category": "website 2",
         "description": "Searches for youtube videos, channels, and playlists.",
-        "help": "_Note: If a query is provided for the download, the first search result is downloaded._\nyoutube query - Searches for youtube videos\nyoutube channel query - Searches for youtube channels\nyoutube playlist query - Searches for youtube playlists\nyoutube video query - Searches for videos (long form)\nyoutube download/dl url/query - Downloads the video from the url\nyoutube download/dl mp3 url/query - Downloads and converts the video to an mp3 file",
+        "help": "_Note: If a query is provided for the download, the first search result is downloaded._\nyoutube query - Searches for youtube videos\nyoutube channel query - Searches for youtube channels\nyoutube playlist query - Searches for youtube playlists\nyoutube video query - Searches for videos (long form)",
         "aliases": "yt",
         "examples": "=>youtube anime\n=>youtube channel tenpi\n=>youtube playlist kawaii music\n=>youtube download mp3 energy drink",
         "cooldown": 10
-    },
-    {
-        "command": "bod",
-        "category": "website 3",
-        "description": "Searches for bots on bots.ondiscord.xyz.",
-        "help": "bod - Gets random bots\nbod query - Searches for bots with the query.",
-        "aliases": "botsondiscord",
-        "examples": "=>bod anime",
-        "cooldown": 15
     },
     {
         "command": "bots",
@@ -3102,15 +3021,6 @@
         "help": "bots - Gets a random bot.\nbots query - Searches for bots with the query.",
         "aliases": "bot, discordbots",
         "examples": "=>bots kisaragi",
-        "cooldown": 15
-    },
-    {
-        "command": "dbl",
-        "category": "website 3",
-        "description": "Searches for bots on top.gg (discord bot list).",
-        "help": "_Note: You can refine the search by specifying a certain property:value. Example: username:kisaragi, prefix:=>, owners:ID_\ndbl - Search for new bots.\ndbl query - Searches for bots with the query.",
-        "aliases": "topgg, discordbotlist",
-        "examples": "=>dbl anime\n=>dbl prefix:+ shortdesc:anime",
         "cooldown": 15
     },
     {
@@ -3129,15 +3039,6 @@
         "help": "_Note: The invocation of this command is removed for privacy reasons._\ngravatar email - Gets the profile picture of the email",
         "aliases": "none",
         "examples": "=>gravatar someone@gmail.com",
-        "cooldown": 10
-    },
-    {
-        "command": "instagram",
-        "category": "website 3",
-        "description": "Searches for posts and users on instagram.",
-        "help": "instagram query - Searches for tagged posts\ninstagram user name - Searches for a user",
-        "aliases": "insta",
-        "examples": "=>instagram anime\n=>instagram user imtenpi",
         "cooldown": 10
     },
     {

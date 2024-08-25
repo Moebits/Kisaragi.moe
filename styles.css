@@ -1913,7 +1913,8 @@ button:focus {
   background-color: transparent;
 }
 .commands-search::placeholder {
-  color: #ffb0fb;
+  font-size: 3vw;
+  color: #ffffff;
 }
 .commands-search-button {
   display: flex;

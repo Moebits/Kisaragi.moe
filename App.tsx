@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React, {useEffect, useReducer} from "react"
 import {Switch, Route, Redirect} from "react-router-dom"
 import HomePage from "./components/HomePage"
 import Commands from "./components/Commands"
@@ -11,19 +11,20 @@ import functions from "./structures/Functions"
 
 require.context("./assets/icons", true)
 
-export default class App extends Component {
-  public reRender = () => {
-    this.forceUpdate()
-  }
+const App: React.FunctionComponent = () => {
+  const [ignored, forceUpdate] = useReducer(x => x + 1, 0)
 
-  public componentDidMount = () => {
+  useEffect(() => {
     functions.preventDoubleClick()
     functions.preventDragging()
     functions.dragScroll(true)
+  }, [])
+
+  const reRender = () => {
+    forceUpdate()
   }
 
-  public render = () => {
-    let theme: string | null = null
+  let theme: string | null = null
     if (typeof window !== "undefined") {
       theme = localStorage.getItem("theme")
       if (!theme) {
@@ -37,15 +38,16 @@ export default class App extends Component {
       <div className={theme === "dark" ? "app dark-theme" : "app"} onTouchStart={() => ""}>
           <ScrollToTop>
             <Switch>
-              <Route exact path={["/", "/home", "/index", "/index.html", "/kisaragi"]}><HomePage reRender={this.reRender}/></Route>
-              <Route exact path={["/commands", "/commands.html"]}><Commands reRender={this.reRender}/></Route>
+              <Route exact path={["/", "/home", "/index", "/index.html", "/kisaragi"]}><HomePage reRender={reRender}/></Route>
+              <Route exact path={["/commands", "/commands.html"]}><Commands reRender={reRender}/></Route>
               <Route exact path={["/privacy", "/privacypolicy"]}><Redirect to="/terms#privacy"/></Route>
-              <Route exact path={["/terms", "/termsofservice"]}><TermsOfService reRender={this.reRender}/></Route>
-              <Route exact path={["/about", "/about.html"]}><About reRender={this.reRender}/></Route>
-              <Route path="*"><$404 reRender={this.reRender}/></Route>
+              <Route exact path={["/terms", "/termsofservice"]}><TermsOfService reRender={reRender}/></Route>
+              <Route exact path={["/about", "/about.html"]}><About reRender={reRender}/></Route>
+              <Route path="*"><$404 reRender={reRender}/></Route>
             </Switch>
           </ScrollToTop>
       </div>
     )
-  }
 }
+
+export default App

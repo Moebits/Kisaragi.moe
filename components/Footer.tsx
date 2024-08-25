@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React, {useEffect, useState} from "react"
 import {HashLink as Link} from "react-router-hash-link"
 import laffeyKimono from "../assets/images/laffeykimono.png"
 import github from "../assets/icons/github.png"
@@ -13,27 +13,14 @@ interface Props {
     reRender: () => void
 }
 
-interface State {
-    themeIcon: any
-}
+const Footer: React.FunctionComponent<Props> = (props) => {
+    const [themeIcon, setThemeIcon] = useState(themeInvert)
 
-export default class Footer extends Component<Props, State> {
-    constructor (props: Props) {
-        super(props)
-        this.state = {
-            themeIcon: themeInvert
-        }
-    }
-
-    public themeChange = () => {
-        if (this.state.themeIcon === themeInvert) {
-            this.setState({
-                themeIcon: themeImg
-            })
+    const themeChange = () => {
+        if (themeIcon === themeInvert) {
+            setThemeIcon(themeImg)
         } else {
-            this.setState({
-                themeIcon: themeInvert
-            })
+            setThemeIcon(themeInvert)
         }
         const theme = localStorage.getItem("theme")
         if (theme === "dark") {
@@ -41,10 +28,10 @@ export default class Footer extends Component<Props, State> {
         } else {
             localStorage.setItem("theme", "dark")
         }
-        this.props.reRender()
+        props.reRender()
     }
 
-    public fanartSection = () => {
+    const fanartSection = () => {
         return (
             <>
             <div className="fanart-credits">
@@ -67,51 +54,52 @@ export default class Footer extends Component<Props, State> {
             </>
         )
     }
-    public render() {
-        return (
-            <footer className="footer">
-                <div className="footer-container">
-                    <div className="footer-column">
-                        <div className="footer-box navigation">
-                            <h3 className="footer-text">Navigation</h3>
-                            <ul>
-                                <li className="footer-li"><Link to="/" className="footer-link">Features</Link></li>
-                                <li className="footer-li"><Link to="/commands" className="footer-link">Commands</Link></li>
-                                <li className="footer-li"><Link to="/terms" className="footer-link">Terms of Service</Link></li>
-                                <li className="footer-li"><Link to="/terms#privacy" className="footer-link">Privacy Policy</Link></li>
-                                <li className="footer-li"><Link to="/about" className="footer-link">About</Link></li>
-                            </ul>
-                        </div>
-                        <div className="footer-box">
-                            <h3 className="footer-text">Source Code</h3>
-                            <img src={github} alt="Github" height="94" width="94" className="footer-img github no-ios-preview" onClick={() => window.open("https://github.com/Tenpi/Kisaragi", "_blank")}/>
-                        </div>
+
+    return (
+        <footer className="footer">
+            <div className="footer-container">
+                <div className="footer-column">
+                    <div className="footer-box navigation">
+                        <h3 className="footer-text">Navigation</h3>
+                        <ul>
+                            <li className="footer-li"><Link to="/" className="footer-link">Features</Link></li>
+                            <li className="footer-li"><Link to="/commands" className="footer-link">Commands</Link></li>
+                            <li className="footer-li"><Link to="/terms" className="footer-link">Terms of Service</Link></li>
+                            <li className="footer-li"><Link to="/terms#privacy" className="footer-link">Privacy Policy</Link></li>
+                            <li className="footer-li"><Link to="/about" className="footer-link">About</Link></li>
+                        </ul>
                     </div>
-                    <div className="footer-column">
-                        <div className="footer-box">
-                            <h3 className="footer-text">Invite the bot!</h3>
-                            <img src={inviteBot} alt="Invite Bot" height="77" width="77" className="footer-img invitebot" onClick={() => window.open("https://discord.com/oauth2/authorize?client_id=593838271650332672&scope=bot&permissions=543279148279", "_blank")}/>
-                        </div>
-                        <div className="footer-box site-theme">
-                            <h3 className="footer-text">Site Theme</h3>
-                            <img src={this.state.themeIcon} alt="Site Theme" height="80" width="80" className="footer-img theme-img" onClick={() => this.themeChange()}/>
-                        </div>
-                    </div>
-                    <div className="footer-column">
-                        <div className="footer-box">
-                            <h3 className="footer-text">Join our Discord Server!</h3>
-                            <img src={discord} alt="Discord" height="89" width="78" className="footer-img discord" onClick={() => window.open("https://discord.gg/77yGmWM", "_blank")}/>
-                        </div>
-                        <div className="footer-box other-links">
-                            <h3 className="footer-text">Other Links</h3>
-                            <ul>
-                                <li className="footer-li"><a href="https://top.gg/bot/593838271650332672/vote" className="footer-link" target="_blank">Upvote</a></li>
-                            </ul>
-                        </div>
+                    <div className="footer-box">
+                        <h3 className="footer-text">Source Code</h3>
+                        <img src={github} alt="Github" height="94" width="94" className="footer-img github no-ios-preview" onClick={() => window.open("https://github.com/Tenpi/Kisaragi", "_blank")}/>
                     </div>
                 </div>
-                {this.props.fanart ? this.fanartSection() : null}
-            </footer>
-        )
-    }
+                <div className="footer-column">
+                    <div className="footer-box">
+                        <h3 className="footer-text">Invite the bot!</h3>
+                        <img src={inviteBot} alt="Invite Bot" height="77" width="77" className="footer-img invitebot" onClick={() => window.open("https://discord.com/oauth2/authorize?client_id=593838271650332672&scope=bot&permissions=543279148279", "_blank")}/>
+                    </div>
+                    <div className="footer-box site-theme">
+                        <h3 className="footer-text">Site Theme</h3>
+                        <img src={themeIcon} alt="Site Theme" height="80" width="80" className="footer-img theme-img" onClick={() => themeChange()}/>
+                    </div>
+                </div>
+                <div className="footer-column">
+                    <div className="footer-box">
+                        <h3 className="footer-text">Join our Discord Server!</h3>
+                        <img src={discord} alt="Discord" height="89" width="78" className="footer-img discord" onClick={() => window.open("https://discord.gg/77yGmWM", "_blank")}/>
+                    </div>
+                    <div className="footer-box other-links">
+                        <h3 className="footer-text">Other Links</h3>
+                        <ul>
+                            <li className="footer-li"><a href="https://top.gg/bot/593838271650332672/vote" className="footer-link" target="_blank">Upvote</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {props.fanart ? fanartSection() : null}
+        </footer>
+    )
 }
+
+export default Footer

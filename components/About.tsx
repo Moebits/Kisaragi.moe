@@ -39,7 +39,6 @@ const About: React.FunctionComponent<Props> = (props) => {
                 <img src={kisaragiChibi} width="150" height="150" className="about-img"/>
             </div>
             <ul className="about-ul">
-                <li className="about-list"><span>Creator: Moebytes</span> <img src={developer} width="30" height="30"/></li>
                 <li className="about-list"><span>Library: Discord.js</span> <img src={discordJS} width="30" height="30"/></li>
                 <li className="about-list"><span>Runtime: Node.js</span> <img src={nodeJS} width="30" height="30"/></li>
                 <li className="about-list"><span>Language: Typescript</span> <img src={typescript} width="30" height="30"/></li>

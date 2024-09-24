@@ -31,9 +31,9 @@ interface Props {
 const categories = [
     "admin", "anime", "config", "fun", "game",
     "heart", "image", "info", "weeb", "level",
-    "lewd", "misc", "mod", "music", "music 2",
+    "booru", "misc", "mod", "music", "music 2",
     "video", "waifu", "website", "website 2", "music 3",
-    "reddit", "twitter", "misc 2", "website 3", "bot dev"
+    "reddit", "twitter", "misc 2", "website 3", "botdev"
 ]
 
 const Commands: React.FunctionComponent<Props> = (props) => {
@@ -130,7 +130,6 @@ const Commands: React.FunctionComponent<Props> = (props) => {
     }
 
     const handleClick = (value: string) => {
-        if (value === "bot dev") value = "bot developer"
         if (category !== "search" && category !== "reload" && category === value) value = "none"
         if (value !== "reload") {
             localStorage.setItem("commands", value)
@@ -163,7 +162,7 @@ const Commands: React.FunctionComponent<Props> = (props) => {
         if (command.command === "distortion") image = `assets/help/${command.category}/dis+ortion.png`
         const gifImages = ["ugoira", "giphy", "tenor"]
         if (gifImages.includes(command.command)) image = image.slice(0, -3) + "gif"
-        const category = command.category === "bot developer" ? "botdev" : command.category.replace(/ +/g, "")
+        const category = command.category.replace(/ +/g, "")
         const help = reactReplace(command.help.replace(/_/g, ""), /\n/g, () => <br className={`command-selection ${category}-command-selection`}/>)
         const examples = reactReplace(command.examples, /\n/g, () => <br className={`command-selection ${category}-command-selection`}/>)
         return (

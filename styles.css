@@ -1094,8 +1094,6 @@ body {
   margin-right: 1.5vw;
   cursor: pointer;
   transition: transform 0.08s;
-  width: 12%;
-  height: 12%;
 }
 .category:active {
   transform: translateY(-0.5vw);
@@ -1780,8 +1778,6 @@ body {
   .category {
     margin-top: 1.5vw;
     margin-right: 1.5vw;
-    width: 17%;
-    height: 17%;
   }
   .command-box {
     padding: 1.5vw;
@@ -1835,8 +1831,6 @@ body {
   .category {
     margin-top: 5vw;
     margin-right: 5vw;
-    width: 30%;
-    height: 30%;
   }
   .categories {
     display: none;

@@ -50,6 +50,7 @@ const writePictures = () => {
       const files = fs.readdirSync(folderPath)
       for (let j = 0; j < files.length; j++) {
           if (files[j] === "files.json") continue
+          if (files[j] === ".DS_Store") continue
           images.push(encodeURI(`https://kisaragi.moe/assets/waifu/${folders[i]}/${path.basename(files[j])}`))
       }
       indexImages.push(...images)

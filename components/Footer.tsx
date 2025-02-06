@@ -71,7 +71,7 @@ const Footer: React.FunctionComponent<Props> = (props) => {
                     </div>
                     <div className="footer-box">
                         <h3 className="footer-text">Source Code</h3>
-                        <img src={github} alt="Github" height="94" width="94" className="footer-img github no-ios-preview" onClick={() => window.open("https://github.com/Tenpi/Kisaragi", "_blank")}/>
+                        <img src={github} alt="Github" height="94" width="94" className="footer-img github no-ios-preview" onClick={() => window.open("https://github.com/Moebits/Kisaragi", "_blank")}/>
                     </div>
                 </div>
                 <div className="footer-column">

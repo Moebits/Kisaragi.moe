@@ -158,7 +158,6 @@ const Commands: React.FunctionComponent<Props> = (props) => {
 
     const generateJSX = (command: Command) => {
         let image = `assets/help/${command.category}/${command.command}.png`
-        if (command.category === "weeb") image = `assets/help/japanese/${command.command}.png`
         if (command.command === "distortion") image = `assets/help/${command.category}/dis+ortion.png`
         const gifImages = ["ugoira", "giphy", "tenor"]
         if (gifImages.includes(command.command)) image = image.slice(0, -3) + "gif"

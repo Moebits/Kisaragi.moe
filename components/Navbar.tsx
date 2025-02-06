@@ -54,7 +54,7 @@ const Navbar: React.FunctionComponent = (props) => {
                         <li><Link to="/about" className="navbar-mobile-text">About</Link></li>
                         <li><a href="https://discord.com/oauth2/authorize?client_id=593838271650332672&scope=bot&permissions=543279148279" className="navbar-mobile-text" target="_blank">Invite</a></li>
                         <li><a href="https://discord.gg/77yGmWM" className="navbar-mobile-text" target="_blank">Discord</a></li>
-                        <li><a href="https://github.com/Tenpi/Kisaragi" className="navbar-mobile-text" target="_blank">Github</a></li>
+                        <li><a href="https://github.com/Moebits/Kisaragi" className="navbar-mobile-text" target="_blank">Github</a></li>
                     </ul>
             </div>
         )
@@ -72,7 +72,7 @@ const Navbar: React.FunctionComponent = (props) => {
                         <li className="nav-li"><Link to="/about" className="navbar-text drop-hide">About</Link></li>
                         <li className="nav-li"><a href="https://discord.com/oauth2/authorize?client_id=593838271650332672&scope=bot&permissions=543279148279" className="navbar-text" target="_blank">Invite</a></li>
                         <li className="nav-li"><a href="https://discord.gg/77yGmWM" className="navbar-text" target="_blank">Discord</a></li>
-                        <li className="nav-li"><a href="https://github.com/Tenpi/Kisaragi" className="navbar-text" target="_blank">Github</a></li>
+                        <li className="nav-li"><a href="https://github.com/Moebits/Kisaragi" className="navbar-text" target="_blank">Github</a></li>
                     </ul>
                 </div>
                 <img src={hamburger} alt="Hamburger Menu" height="50" width="50" className="hamburger" onClick={() => slide()}/>
@@ -86,7 +86,7 @@ const Navbar: React.FunctionComponent = (props) => {
                     <li><Link to="/about" className="navbar-mobile-text">About</Link></li>
                     <li><a href="https://discord.com/oauth2/authorize?client_id=593838271650332672&scope=bot&permissions=543279148279" className="navbar-mobile-text" target="_blank">Invite</a></li>
                     <li><a href="https://discord.gg/77yGmWM" className="navbar-mobile-text" target="_blank">Discord</a></li>
-                    <li><a href="https://github.com/Tenpi/Kisaragi" className="navbar-mobile-text" target="_blank">Github</a></li>
+                    <li><a href="https://github.com/Moebits/Kisaragi" className="navbar-mobile-text" target="_blank">Github</a></li>
                 </ul>
             </div>
             {featureDropdown ? dropdown() : null}

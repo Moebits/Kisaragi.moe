@@ -159,7 +159,7 @@ const Commands: React.FunctionComponent<Props> = (props) => {
     const generateJSX = (command: Command) => {
         let image = `assets/help/${command.category}/${command.command}.png`
         if (command.command === "distortion") image = `assets/help/${command.category}/dis+ortion.png`
-        const gifImages = ["ugoira", "giphy", "tenor"]
+        const gifImages = ["giphy", "tenor"]
         if (gifImages.includes(command.command)) image = image.slice(0, -3) + "gif"
         const category = command.category.replace(/ +/g, "")
         const help = reactReplace(command.help.replace(/_/g, ""), /\n/g, () => <br className={`command-selection ${category}-command-selection`}/>)

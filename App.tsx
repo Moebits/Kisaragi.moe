@@ -12,6 +12,7 @@ import functions from "./structures/Functions"
 require.context("./assets/icons", true)
 require.context("./assets/banners", true)
 require.context("./assets/embed", true)
+require.context("./assets/images", true)
 
 const App: React.FunctionComponent = () => {
   const [ignored, forceUpdate] = useReducer(x => x + 1, 0)

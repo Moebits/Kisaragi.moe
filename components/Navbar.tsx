@@ -53,7 +53,7 @@ const Navbar: React.FunctionComponent = (props) => {
                         <li><Link to="/commands" className="navbar-mobile-text">Commands</Link></li>
                         <li><Link to="/about" className="navbar-mobile-text">About</Link></li>
                         <li><a href="https://discord.com/oauth2/authorize?client_id=593838271650332672&scope=bot&permissions=543279148279" className="navbar-mobile-text" target="_blank">Invite</a></li>
-                        <li><a href="https://discord.gg/77yGmWM" className="navbar-mobile-text" target="_blank">Discord</a></li>
+                        <li><a href="https://discord.gg/sNhUu5JN6y" className="navbar-mobile-text" target="_blank">Discord</a></li>
                         <li><a href="https://github.com/Moebits/Kisaragi" className="navbar-mobile-text" target="_blank">Github</a></li>
                     </ul>
             </div>
@@ -71,7 +71,7 @@ const Navbar: React.FunctionComponent = (props) => {
                         <li className="nav-li" onMouseEnter={() => toggleDropdown(false)}><Link to="/commands" className="navbar-text drop-hide">Commands</Link></li>
                         <li className="nav-li"><Link to="/about" className="navbar-text drop-hide">About</Link></li>
                         <li className="nav-li"><a href="https://discord.com/oauth2/authorize?client_id=593838271650332672&scope=bot&permissions=543279148279" className="navbar-text" target="_blank">Invite</a></li>
-                        <li className="nav-li"><a href="https://discord.gg/77yGmWM" className="navbar-text" target="_blank">Discord</a></li>
+                        <li className="nav-li"><a href="https://discord.gg/sNhUu5JN6y" className="navbar-text" target="_blank">Discord</a></li>
                         <li className="nav-li"><a href="https://github.com/Moebits/Kisaragi" className="navbar-text" target="_blank">Github</a></li>
                     </ul>
                 </div>
@@ -85,7 +85,7 @@ const Navbar: React.FunctionComponent = (props) => {
                     <li><Link to="/commands" className="navbar-mobile-text">Commands</Link></li>
                     <li><Link to="/about" className="navbar-mobile-text">About</Link></li>
                     <li><a href="https://discord.com/oauth2/authorize?client_id=593838271650332672&scope=bot&permissions=543279148279" className="navbar-mobile-text" target="_blank">Invite</a></li>
-                    <li><a href="https://discord.gg/77yGmWM" className="navbar-mobile-text" target="_blank">Discord</a></li>
+                    <li><a href="https://discord.gg/sNhUu5JN6y" className="navbar-mobile-text" target="_blank">Discord</a></li>
                     <li><a href="https://github.com/Moebits/Kisaragi" className="navbar-mobile-text" target="_blank">Github</a></li>
                 </ul>
             </div>

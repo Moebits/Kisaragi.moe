@@ -58,7 +58,7 @@ const TermsOfService: React.FunctionComponent<Props> = (props) => {
                     <h3 className="tos-title">Bot Spam and Misuse</h3>
                     <details className="tos-details" open>
                         <summary ref={func.animateSummary} className="tos-list-title"><span>Content</span></summary>
-                        <p className="tos-list-detail">Everything posted by the bot falls under your responsibility, not the bot or developer. I do make an effort to filter content but the nature of many commands is retrieving arbitrary data from the internet.</p>
+                        <p className="tos-list-detail">Everything posted by the bot falls under your responsibility. An effort is made to filter content but the nature of many commands is retrieving arbitrary data from the internet.</p>
                     </details>
                     <details className="tos-details" open>
                         <summary ref={func.animateSummary} className="tos-list-title"><span>API Spam</span></summary>
@@ -97,11 +97,11 @@ const TermsOfService: React.FunctionComponent<Props> = (props) => {
                     <h3 className="privacy-title blue-select">Public Information</h3>
                     <details className="privacy-details" open>
                         <summary ref={func.animateSummary} className="privacy-list-title"><span className="blue-select">Messages</span></summary>
-                        <p className="privacy-list-detail blue-select">Several commands read your message content/attachments, and deleted messages may be logged if message logging is enabled. The bot only uses this information to provide the command functionality and does not store any messages.</p>
+                        <p className="privacy-list-detail blue-select">Several commands read your message content/attachments, and deleted messages may be logged if message logging is enabled. The bot uses this information for command functionality and does not store any messages.</p>
                     </details>
                     <details className="privacy-details" open>
                         <summary ref={func.animateSummary} className="privacy-list-title"><span className="blue-select">Guilds</span></summary>
-                        <p className="privacy-list-detail blue-select">Kisaragi has access to information about every guild she is on, including channels, members, roles, and emojis. She only uses this information as required to provide command functionality.</p>
+                        <p className="privacy-list-detail blue-select">Kisaragi has access general information about your guild, including channels, members, roles, and emojis. She uses this information as required for command functionality.</p>
                     </details>
                     <h3 className="privacy-title blue-select">Private Information (Oauth2 Only)</h3>
                     <details className="privacy-details" open>
@@ -115,10 +115,6 @@ const TermsOfService: React.FunctionComponent<Props> = (props) => {
                     <details className="privacy-details" open>
                         <summary ref={func.animateSummary} className="privacy-list-title"><span className="blue-select">Account Access</span></summary>
                         <p className="privacy-list-detail blue-select">If you authenticate with a social media account, it gives the bot public read and write access over your account. The bot only does actions on your behalf.</p>
-                    </details>
-                    <details className="privacy-details" open>
-                        <summary ref={func.animateSummary} className="privacy-list-title"><span className="blue-select">Joining Servers</span></summary>
-                        <p className="privacy-list-detail blue-select">Any server admin will be able to add you onto their server with the <span className="command blue-select">add</span> command as long as they know your user id or tag. You are always notified when this occurs.</p>
                     </details>
                     <h3 className="privacy-title blue-select">Delete Information</h3>
                     <details className="privacy-details" open>

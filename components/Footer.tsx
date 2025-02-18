@@ -87,7 +87,7 @@ const Footer: React.FunctionComponent<Props> = (props) => {
                 <div className="footer-column">
                     <div className="footer-box">
                         <h3 className="footer-text">Join our Discord Server!</h3>
-                        <img src={discord} alt="Discord" height="89" width="78" className="footer-img discord" onClick={() => window.open("https://discord.gg/77yGmWM", "_blank")}/>
+                        <img src={discord} alt="Discord" height="89" width="78" className="footer-img discord" onClick={() => window.open("https://discord.gg/sNhUu5JN6y", "_blank")}/>
                     </div>
                     <div className="footer-box other-links">
                         <h3 className="footer-text">Other Links</h3>

@@ -138,7 +138,6 @@ export default class Functions {
 
     element.addEventListener("mousedown", element.mouseDownFunc = (event: MouseEvent) => {
             if (event.button === 2) return 
-            event.preventDefault()
             Functions.clearSelection()
             // @ts-ignore
             document.activeElement.blur()

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, {useEffect, useState, useReducer} from "react"
 import kisaragiNewYearChibi from "../assets/images/kisaraginewyearchibi.png"
 import searchIcon from "../assets/icons/search-icon.png"
 import showPic from "../assets/icons/show-pic.png"
@@ -36,13 +36,14 @@ const categories = [
     "reddit", "twitter", "misc 2", "website 3", "botdev"
 ]
 
+let searchText = ""
+
 const Commands: React.FunctionComponent<Props> = (props) => {
+    const [ignored, forceUpdate] = useReducer(x => x + 1, 0)
     const [category, setCategory] = useState("none")
     const [commandExpanded, setCommandExpanded] = useState(false)
     const [imageExpanded, setImageExpanded] = useState(false)
     const [searching, setSearching] = useState(false)
-
-    let searchText = ""
 
     useEffect(() => {
         document.title = "Commands"
@@ -57,6 +58,7 @@ const Commands: React.FunctionComponent<Props> = (props) => {
         if (color) {
             $(".commands-search-container").css("border-color", color)
             $(".commands-search-button").css("background-color", color)
+            $(".commands-search").css("color", color)
         }
     })
 
@@ -136,6 +138,7 @@ const Commands: React.FunctionComponent<Props> = (props) => {
             expandReset()
         }
         setCategory(value)
+        forceUpdate()
     }
 
     const generateRows = (columns: number) => {
@@ -214,7 +217,7 @@ const Commands: React.FunctionComponent<Props> = (props) => {
 
             <section className="commands-search-bar">
                 <div className="commands-search-container">
-                    <input type="search" spellCheck="false" placeholder="Search..." className="commands-search" onChange={(event) => {searchText = event.target.value}}/>
+                    <input type="search" spellCheck="false" placeholder="Search..." className="commands-search" onChange={(event) => {searchText = event.target.value}} onKeyDown={(event) => {if (event.key === "Enter") handleClick("search")}}/>
                     <button type="submit" id="submit" className="commands-search-button" onClick={() => handleClick("search")}><img src={searchIcon} width="140" height="140" className="search-icon"/></button>
                 </div>
             </section>

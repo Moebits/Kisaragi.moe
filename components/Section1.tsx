@@ -25,7 +25,7 @@ const Section1: React.FunctionComponent = (props) => {
                 <div className="button-container">
                     <button className="blue-button" onClick={() => window.open("https://discord.com/oauth2/authorize?client_id=593838271650332672&scope=bot&permissions=543279148279", "_blank")}><span className="section1-text button-text">Invite</span></button>
                     <Link to="/commands"><button className="blue-button"><span className="section1-text button-text">Commands</span></button></Link>
-                    <button className="blue-button" onClick={() => window.open("https://github.com/Tenpi/Kisaragi", "_blank")}><span className="section1-text button-text">Source Code</span></button>
+                    <button className="blue-button" onClick={() => window.open("https://github.com/Moebits/Kisaragi", "_blank")}><span className="section1-text button-text">Source Code</span></button>
                 </div>
             </div>
         </section>

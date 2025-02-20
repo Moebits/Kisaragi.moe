@@ -92,6 +92,7 @@ const Footer: React.FunctionComponent<Props> = (props) => {
                     <div className="footer-box other-links">
                         <h3 className="footer-text">Other Links</h3>
                         <ul>
+                            <li className="footer-li"><a href="https://discord.com/discovery/applications/593838271650332672" className="footer-link" target="_blank">Discovery</a></li>
                             <li className="footer-li"><a href="https://top.gg/bot/593838271650332672/vote" className="footer-link" target="_blank">Upvote</a></li>
                         </ul>
                     </div>
